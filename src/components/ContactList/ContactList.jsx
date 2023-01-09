@@ -8,7 +8,7 @@ export const ContactList = ({ contacts, onDeleteContact }) => (
     <ContactsList>
         {contacts.map(({id, name, number}) => (
             <ContactItem key={id}>
-                <ContactText><BsFillPersonFill style={{fill: 'orange', marginRight: '5px'}} />{name}</ContactText>
+                <ContactText><BsFillPersonFill style={{ fill: 'orange', marginRight: '5px'}} />{name}</ContactText>
                 
                 <ContactText><BsTelephoneFill style={{fill: 'orange', marginRight: '5px'}}/>{number}</ContactText>
                 <ContactButton type='button' onClick={() => onDeleteContact(id)}>Delete</ContactButton>
