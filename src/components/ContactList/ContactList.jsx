@@ -11,7 +11,7 @@ export const ContactList = ({ contacts, onDeleteContact }) => (
                 <ContactText><BsFillPersonFill style={{ fill: 'orange', marginRight: '5px'}} />{name}</ContactText>
                 
                 <ContactText><BsTelephoneFill style={{fill: 'orange', marginRight: '5px'}}/>{number}</ContactText>
-                <ContactButton type='button' onClick={() => onDeleteContact(id)}>Delete</ContactButton>
+                <ContactButton type='button' aria-label='Add new contact' onClick={() => onDeleteContact(id)}>Delete</ContactButton>
             </ContactItem>
         ))}
     </ContactsList>
