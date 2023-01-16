@@ -1,18 +1,26 @@
 import styled from 'styled-components'
 
 export const ContactsList = styled.ul`
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    overflow: hidden;
-    background-color: ${props => props.theme.colors.white};
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: ${props => props.theme.colors.white};
 
-    width: 600px;
+  width: calc(100vw - 20px);
 
-    box-shadow: ${props => props.theme.shadow.contactsList};
-    border-radius: 4px;
-`
+  box-shadow: ${props => props.theme.shadow.contactsList};
+  border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 600px;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1200px) {
+    max-width: 500px;
+  }
+`;
 
 
 
@@ -30,11 +38,14 @@ export const ContactItem = styled.li`
     
 `
 export const ContactText = styled.p`
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    min-width: 240px;
-`
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+
+  @media screen and (min-width: 320px) {
+    min-width: 100px;
+  }
+`;
 
 export const ContactButton = styled.button`
     display: inline-flex;

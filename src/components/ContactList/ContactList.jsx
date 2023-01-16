@@ -9,7 +9,6 @@ export const ContactList = ({ contacts, onDeleteContact }) => (
         {contacts.map(({id, name, number}) => (
             <ContactItem key={id}>
                 <ContactText><BsFillPersonFill style={{ fill: 'orange', marginRight: '5px'}} />{name}</ContactText>
-                
                 <ContactText><BsTelephoneFill style={{fill: 'orange', marginRight: '5px'}}/>{number}</ContactText>
                 <ContactButton type='button' aria-label='Add new contact' onClick={() => onDeleteContact(id)}>Delete</ContactButton>
             </ContactItem>
